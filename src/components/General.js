@@ -1,3 +1,5 @@
+// Sub-form for general (name, email, phone) information
+
 import React, { Component } from 'react';
 import '../styles/App.css';
 
@@ -29,6 +31,7 @@ class General extends Component {
     return (
       <div>
         <form>
+          <h2>General Info</h2>
           <div>
             <label htmlFor='fullName'>Full Name</label>
             <input
