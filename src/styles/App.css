@@ -26,3 +26,9 @@ div {
 h2 {
   text-align: center;
 }
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

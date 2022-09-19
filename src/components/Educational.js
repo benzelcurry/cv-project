@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 
-// CREATE ABILITY TO ADD MORE SCHOOLS
+// CREATE ABILITY TO ADD/DELETE MORE SCHOOLS
+// IMPROVE FORMATTING SO IT'S NOT COMPLETELY VERTICAL
 class Educational extends Component {
   constructor(props) {
     super(props)

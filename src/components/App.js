@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import General from './General';
 import Educational from './Educational';
+import Practical from './Practical';
 import '../styles/App.css';
 
 // PROJECT WILL NEED STYLING
-// MAYBE CHANGE AMOUNT OF BUTTONS
+// MAYBE CHANGE/REDUCE AMOUNT OF BUTTONS
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
         <h1 className='title'>Curriculum Vitae</h1>
         <General />
         <Educational />
+        <Practical />
       </div>
     )
   }
