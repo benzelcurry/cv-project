@@ -10,6 +10,7 @@ class Educational extends Component {
     super(props)
 
     this.state= {
+      addEducation: [{}],
       school: '',
       major: '',
     }
@@ -25,10 +26,17 @@ class Educational extends Component {
     e.preventDefault();
   }
 
+  addForm = () => {
+    this.setState({
+      addEducation: [...this.state.addEducation, {}]
+    })
+  }
+
   render() {
     return (
       <div>
         <h2>Educational Info</h2>
+        {this.state.addEducation.map(() => (
         <form>
           <div>
             <label htmlFor='school'>School Attended</label>
@@ -62,12 +70,10 @@ class Educational extends Component {
               id='dateFinished'
             />
           </div>
-          <button
-            className='submit'
-            onClick={this.handleSubmit}
-            type='submit'>Submit
-          </button>
+          <button>Remove Education</button>
         </form>
+        ))}
+        <button onClick={this.addForm}>Add Education</button>
       </div>
     )
   }
