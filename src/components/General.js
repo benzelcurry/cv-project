@@ -1,7 +1,7 @@
 // Sub-form for general (name, email, phone) information
 
 import React, { Component } from 'react';
-import '../styles/App.css';
+import '../styles/General.css';
 
 class General extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class General extends Component {
 
   render() {
     return (
-      <div>
+      <div className='section'>
         <form>
           <h2>General Info</h2>
           <div>
@@ -59,11 +59,6 @@ class General extends Component {
               id='phone'
             />
           </div>
-          <button 
-            className='submit' 
-            onClick={this.handleSubmit}
-            type='submit'>Submit
-          </button>
         </form>
       </div>
     )

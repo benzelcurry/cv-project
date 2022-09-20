@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
-import '../styles/App.css';
+import '../styles/Educational.css';
 
 // FIGURE OUT HOW TO DELETE SCHOOLS DYNAMICALLY INSTEAD OF JUST LAST SCHOOL
 // IMPROVE FORMATTING SO IT'S NOT COMPLETELY VERTICAL
@@ -48,11 +48,11 @@ class Educational extends Component {
 
   render() {
     return (
-      <div>
+      <div className='section'>
         <h2>Educational Info</h2>
         {this.state.addEducation.map(() => (
-          <div>
-            <form>
+          <div className='form-section'>
+            <form className='education-form'>
               <div>
                 <label htmlFor='school'>School Attended</label>
                 <input
@@ -87,12 +87,13 @@ class Educational extends Component {
               </div>
             </form>
             <button
+              className='remove'
               id={this.state.index} 
               onClick={(e) => this.deleteForm(e.target.id)}>Remove Education
             </button>
           </div>
         ))}
-        <button onClick={this.addForm}>Add Education</button>
+        <button className='add' onClick={this.addForm}>Add Education</button>
       </div>
     )
   }
