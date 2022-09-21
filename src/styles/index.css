@@ -4,10 +4,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  justify-content: center;
 }
 
 #root {
   display: grid;
+  width: 800px;
   justify-self: center;
   align-self: center;
   border: solid black 4px;

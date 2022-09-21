@@ -12,11 +12,12 @@ class Educational extends Component {
 
     this.state = {
       addEducation: [],
+      index: 0,
       education: {
+        id: uniqid(),
         school: '',
         major: '',
-        id: uniqid()
-      }
+      },
     }
   }
 
@@ -35,14 +36,13 @@ class Educational extends Component {
 
   addForm = () => {
     this.setState({
-      addEducation: [...this.state.addEducation, {}],
-      index: this.state.index + 1
+      addEducation: [...this.state.addEducation, {id: this.state.index}],
+      index: this.state.index + 1,
     })
-    console.log(this.state.index);
   }
 
-  deleteForm = (index) => {
-    this.state.addEducation.splice(index, 1);
+  deleteForm = (id) => {
+    this.state.addEducation = this.state.addEducation.filter(x => Number(x.id) !== Number(id));
     this.setState({});
   }
 
@@ -50,8 +50,8 @@ class Educational extends Component {
     return (
       <div className='section'>
         <h2>Educational Info</h2>
-        {this.state.addEducation.map(() => (
-          <div className='form-section'>
+        {this.state.addEducation.map((edu) => (
+          <div className='form-section' key={edu.id}>
             <form className='education-form'>
               <div>
                 <label htmlFor='school'>School Attended</label>
@@ -88,7 +88,7 @@ class Educational extends Component {
             </form>
             <button
               className='remove'
-              id={this.state.index} 
+              id={edu.id} 
               onClick={(e) => this.deleteForm(e.target.id)}>Remove Education
             </button>
           </div>
