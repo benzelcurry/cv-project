@@ -49,12 +49,12 @@ class Practical extends Component {
 
   render() {
     return (
-      <div>
+      <div className='section'>
         <h2>Work History</h2>
           {this.state.workHistory.map((edu) => (
-            <div key={edu.id}>
+            <div className='form-section' key={edu.id}>
               <form>
-                <div class="practical-section">
+                <div className="practical-section">
                   <div>
                     <label htmlFor='companyName'>Company Name</label>
                     <input
@@ -116,12 +116,15 @@ class Practical extends Component {
                 </div>
               </form>
               <button
+                className='remove'
                 id={edu.id}
                 onClick={(e) => this.deleteForm(e.target.id)}>Remove Experience
               </button>
             </div>
           ))}
-          <button onClick={this.addForm}>Add Experience</button>
+          <button 
+            onClick={this.addForm}
+            className='add'>Add Experience</button>
       </div>
     )
   }
