@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import '../styles/Educational.css';
 
-// FIGURE OUT HOW TO DELETE SCHOOLS DYNAMICALLY INSTEAD OF JUST LAST SCHOOL
-// IMPROVE FORMATTING SO IT'S NOT COMPLETELY VERTICAL
 class Educational extends Component {
   constructor(props) {
     super(props)
